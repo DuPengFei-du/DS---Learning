@@ -31,6 +31,11 @@ void QueuePush(Queue* q,int val)
 	//在队列中的插入，其实就是之前的尾插操作
 	//先定义一个节点出来
 	Node* node = (Node*)malloc(sizeof(Node));
+	if (node == NULL)
+	{
+		assert(0);
+		return;
+	}
 	node->val = val;
 	if (q->front == NULL)
 	{
