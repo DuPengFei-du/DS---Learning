@@ -1,0 +1,89 @@
+#include"Seq.h"
+
+void SeqListInit(SeqList* seq)
+{
+	assert(seq != NULL); 
+	seq->array = (int*)malloc(sizeof(int) * DefaultCapacity);
+	if (NULL == seq->array)
+	{
+		assert(0);
+		return;
+	}
+	seq->_size = 0;
+	seq->_capacity = DefaultCapacity;
+}
+
+void SeqListDestroy(SeqList* seq)
+{
+	free(seq->array);
+	seq->array = NULL;
+	seq->_size = 0;
+	seq->_capacity = 0;
+}
+
+void SeqListPrint(SeqList* seq)
+{
+	assert(seq);
+	for (int i = 0; i < seq->_size; i++)
+	{
+		printf("%d ", seq->array[i]);
+	}
+	printf("\n");
+}
+
+void CheckCapacity(SeqList* seq)
+{
+	assert(seq);
+	if (seq->_capacity == seq->_size)
+	{
+		int newcapacity = 2 * DefaultCapacity;
+		int* temp = (int*)malloc(sizeof(int) * newcapacity);
+		if (NULL == temp)
+		{
+			assert(0);
+			return;
+		}
+		memcpy(temp, seq->array, sizeof(int) * seq->_size);
+		free(seq->array);
+		seq->array = temp;
+		seq->_capacity = newcapacity;
+	}
+}
+
+void SeqListPushBack(SeqList* seq, int data)
+{
+	assert(seq);
+	CheckCapacity(seq);
+	seq->array[seq->_size] = data;
+	seq->_size ++;
+}
+
+void SeqListPopBack(SeqList* seq)
+{
+	assert(seq);
+	if (0 == seq->_size)
+		return;
+	seq->_size--;
+}
+
+void SeqListPushFront(SeqList* seq, int data)
+{
+	assert(seq);
+	CheckCapacity(seq);
+	for (int i = seq->_size - 1; i >= 0; i--)
+	{
+		seq->array[i + 1] = seq->array[i];
+	}
+	seq->array[0] = data;
+	seq->_size++;
+}
+
+void SeqListPopFront(SeqList* seq)
+{
+	assert(seq);
+	for (int i = 0; i <= seq->_size - 2; i++)
+	{
+		seq->array[i] = seq->array[i + 1];
+	}
+	seq->_size--;
+}
