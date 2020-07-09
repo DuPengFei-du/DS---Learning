@@ -1,0 +1,9 @@
+﻿  Seq.c
+D:\GIT仓库\DS---Learning\test(10)\test(10)\Seq.c(6,59): warning C4047:  “=”:“int”与“int *”的间接级别不同
+D:\GIT仓库\DS---Learning\test(10)\test(10)\Seq.c(7,24): warning C4047:  “==”:“void *”与“int”的间接级别不同
+D:\GIT仓库\DS---Learning\test(10)\test(10)\Seq.c(19,17): warning C4022:  “free”: 指针与实参 1 不匹配
+D:\GIT仓库\DS---Learning\test(10)\test(10)\Seq.c(20,19): warning C4047:  “=”:“int”与“void *”的间接级别不同
+D:\GIT仓库\DS---Learning\test(10)\test(10)\Seq.c(37,26): warning C4022:  “memcpy”: 指针与实参 2 不匹配
+D:\GIT仓库\DS---Learning\test(10)\test(10)\Seq.c(38,18): warning C4022:  “free”: 指针与实参 1 不匹配
+D:\GIT仓库\DS---Learning\test(10)\test(10)\Seq.c(39,20): warning C4047:  “=”:“int”与“int *”的间接级别不同
+D:\GIT仓库\DS---Learning\test(10)\test(10)\Seq.c(48,23): error C2109:  下标要求数组或指针类型
