@@ -1,0 +1,24 @@
+#include"Stack.h"
+#include"Queue.h"
+
+int main()
+{
+	Stack s;
+
+	StackInit(&s);
+
+	StackPush(&s, 10);
+	StackPush(&s, 20);
+	StackPush(&s, 30);
+	StackPush(&s, 40);
+	StackPush(&s, 50);
+
+	printf("%d\n", StackSize(&s));
+
+	StackPop(&s);
+	StackPop(&s);
+
+	printf("%d\n", StackSize(&s));
+
+	StackDestroy(&s);
+}
