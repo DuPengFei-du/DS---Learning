@@ -1,0 +1,4 @@
+﻿  Heap.c
+D:\GIT仓库\DS---Learning\Prac(11)\Prac(11)\Heap.c(1,1): warning C4335:  检测到 Mac 文件格式: 请将源文件转换为 DOS 格式或 UNIX 格式
+main.obj : error LNK2019: 无法解析的外部符号 _TestHeap，该符号在函数 _main 中被引用
+D:\GIT仓库\DS---Learning\Prac(11)\Debug\Prac(11).exe : fatal error LNK1120: 1 个无法解析的外部命令
