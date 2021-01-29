@@ -1,0 +1,38 @@
+#pragma once 
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<assert.h>
+#include<string.h>
+
+
+//不带头结点的单链表
+typedef struct ListNode
+{
+	int data;
+	struct ListNode* next;
+}Node;
+
+
+typedef struct List
+{
+	Node* head;
+}List;
+
+
+
+void NodeInit(List* pl);
+
+void NodeDestroy(List* pl);
+
+void NodePushBack(List* pl,int data);
+
+void NodePushFront(List* pl, int data);
+
+void NodePopFront(List* pl);
+
+void NodePopBack(List* pl);
+
+void NodePrint(List* pl);
