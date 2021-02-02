@@ -1,0 +1,39 @@
+#include"Seq.h"
+
+
+int main()
+{
+	Seq s;
+
+	SeqListInit(&s);
+
+	SeqListPushBack(&s, 10);
+	SeqListPushBack(&s, 20);
+	SeqListPushBack(&s, 30);
+	SeqListPushBack(&s, 40);
+	SeqListPushBack(&s, 50);
+
+	SeqListPrint(&s);
+
+	SeqListPushFront(&s, 1);
+	SeqListPushFront(&s, 2);
+	SeqListPushFront(&s, 3);
+	SeqListPushFront(&s, 4);
+	SeqListPushFront(&s, 5);
+
+	SeqListPrint(&s);
+
+	SeqListPopFront(&s);
+	SeqListPopFront(&s);
+	SeqListPopFront(&s);
+
+	SeqListPrint(&s);
+
+	SeqListPopBack(&s);
+	SeqListPopBack(&s);
+
+	SeqListPrint(&s);
+
+	SeqListDestroy(&s);
+
+}
